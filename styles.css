@@ -22,18 +22,11 @@ body {
   height: 50px;
   object-fit: contain;
 }
-h2 {
-  font-family: "Boogaloo", sans-serif;
+h1 {
+  font-family: "Manufacturing Consent", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size:xx-large;
-  color:yellow;
-  stroke: #f9f9f9;
-}
-h1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     font-size: 24px;
-    font-weight: 600;
     text-align: center;
     margin: 0;
     padding: 1em;
@@ -68,7 +61,7 @@ h1 {
   .nav-links li a:hover {
     color: #f39c12;
   }
- 
+ /* HERO BANNER */
 .banner {
   position: relative;
   text-align: center;
@@ -96,6 +89,14 @@ h1 {
 .banner * {
   position: relative;
   z-index: 1;
+}
+h2 {
+  font-family: "Boogaloo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:xx-large;
+  color:yellow;
+  stroke: #f9f9f9;
 }
  
   /* Card Section */
@@ -132,13 +133,54 @@ h1 {
 .photo-card img:hover {
   transform: scale(1.05);
 }
+/* Images on mobile device */
 @media (max-width: 600px) {
   .photo-card img {
     height: 100%;
     width:100%;
-    object-fit: cover;
   }
 }
+ 
+/* RESPONSIVE NAV BAR WITH HAMBURGER */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+
+    display: block;
+
+  }
+ 
+  .nav-links {
+
+    display: none;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    background-color: #222;
+
+    padding: 10px 0;
+
+    text-align: center;
+
+  }
+ 
+  .nav-links.show {
+
+    display: flex;
+
+  }
+ 
+  .nav-links li {
+
+    margin: 10px 0;
+
+  }
+
+}
+ 
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
@@ -229,7 +271,7 @@ footer {
 
 /* Copyright */
 .copyright {
-  border-top: 1px solid #333;
+  border-top: 2px solid #333;
   padding-top: 20px;
   font-size: 0.95rem;
   color: #aaa;
